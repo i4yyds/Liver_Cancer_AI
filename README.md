@@ -4,11 +4,14 @@ DataFountain2019肝癌影像AI诊断-开源项目
 
 比赛链接：https://www.datafountain.cn/competitions/335
 
+## CT数据
+因为 trainset1 中 7361240E-5A4D-4A1F-A9B4-203E92A0E10B 存在问题，所以将此条数据删除。本项目使用来自 trainset1 的 3599 个训练样本，使用来自trainset2 的 4000 个测试样本。
 ## CT 数据预处理
-因为 trainset1 中 7361240E-5A4D-4A1F-A9B4-203E92A0E10B 存在问题，所以将此条数据删除，训练集共3599个样本。
-trainset2作为测试集，共计4000个样本。
+CT数据预处理是个棘手的问题，我们采用正态分布函数对每个病人的CT图采样。
 ## ResNet18建模
+受机器性能的限制，本项目只使用ResNet18作为特征提取器，输入尺寸设置为 128*128 。
 ## 训练
+
 ## 测试
 
 Coming Soon!
