@@ -14,5 +14,8 @@ CT 数据预处理是个棘手的问题，本项目采用正态分布函数对�
 python train.py
 ## 测试
 python test.py
+## 参考以下论文能进一步提高精度
+http://openaccess.thecvf.com/content_ECCV_2018/papers/Sanghyun_Woo_Convolutional_Block_Attention_ECCV_2018_paper.pdf
+
 
 # 求star，谢谢！
