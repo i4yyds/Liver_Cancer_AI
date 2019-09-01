@@ -13,7 +13,7 @@ class CTDataset(Dataset):
 
     def __init__(self, transform=None):
         self.transform = transform
-        self.train_img_dir = "../data/train_dataset_process/"
+        self.train_img_dir = "./data/train_dataset_process/"
 
     def __len__(self):
         return len(os.listdir(self.train_img_dir))
@@ -31,7 +31,7 @@ class CTDataset(Dataset):
 
         patient = torch.FloatTensor(patient)
 
-        label_csv = pd.read_csv("../data/train_label.csv")
+        label_csv = pd.read_csv("./data/train_label.csv")
         label = label_csv[label_csv['id'].isin([patient_name])]['ret']
         if int(label) == 1:
             label = True
