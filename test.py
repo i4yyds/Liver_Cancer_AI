@@ -14,13 +14,13 @@ from CTData import dataloader
 
 for epoch in range(8, 9, 1):
 
-    fcn_model = torch.load('checkpoints/ct_model_' + str(epoch) + '.pt')
+    fcn_model = torch.load('./checkpoints/ct_model_' + str(epoch) + '.pt')
 
     if torch.cuda.is_available():
         fcn_model.cuda()
     fcn_model.eval()
 
-    test_img_dir = "../data/train2_dataset_process/"
+    test_img_dir = "./data/train2_dataset_process/"
 
     t = 0
     f = 0
